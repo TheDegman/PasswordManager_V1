@@ -10,25 +10,42 @@ using System.Windows.Forms;
 using System.Data.Entity;
 using PasswordManager_V1.Model;
 
+
+
+
 namespace PasswordManager_V1
 {
     public partial class Form1 : Form
     {
+        List<Korisnik> korisnikList = new List<Korisnik>();
         public Form1()
         {
             InitializeComponent();
-            using (BazaPodatakaEntities1 context = new BazaPodatakaEntities1())
+
+            using(BazaPodatakaEntities2 context = new BazaPodatakaEntities2())
             {
                 var query = context.Korisniks
-                    .Select(user => new
+                    .Select(k => new
                     {
-                        Username=user.Username,
-                        Password=user.Password,
-                        
+                        ime=k.Username,
+                        sifra=k.Password,                       
+
                     });
-                listBox1.DataSource = query;
+                foreach (var kInfo in query)
+                {
+                    
+
+                }
+                
+                
+                
+                
+
+
 
             }
+            
+            
 
             
         }

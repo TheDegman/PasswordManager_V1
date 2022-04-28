@@ -60,7 +60,7 @@
           <Property Name="DateExpires" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="Korisnik" Relationship="BazaPodatakaModel.KorisnikMapa" FromRole="Mapa" ToRole="Korisnik" />
         </EntityType>
-        <EntityContainer Name="BazaPodatakaEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BazaPodatakaEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Korisniks" EntityType="Self.Korisnik" />
           <EntitySet Name="Mapas" EntityType="Self.Mapa" />
           <AssociationSet Name="KorisnikMapa" Association="BazaPodatakaModel.KorisnikMapa">
@@ -85,7 +85,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BazaPodatakaModelStoreContainer" CdmEntityContainer="BazaPodatakaEntities1">
+        <EntityContainerMapping StorageEntityContainer="BazaPodatakaModelStoreContainer" CdmEntityContainer="BazaPodatakaEntities2">
           <EntitySetMapping Name="Korisniks">
             <EntityTypeMapping TypeName="BazaPodatakaModel.Korisnik">
               <MappingFragment StoreEntitySet="Korisnik">

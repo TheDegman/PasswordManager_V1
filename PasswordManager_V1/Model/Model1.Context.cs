@@ -13,10 +13,10 @@ namespace PasswordManager_V1.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BazaPodatakaEntities1 : DbContext
+    public partial class BazaPodatakaEntities2 : DbContext
     {
-        public BazaPodatakaEntities1()
-            : base("name=BazaPodatakaEntities1")
+        public BazaPodatakaEntities2()
+            : base("name=BazaPodatakaEntities2")
         {
         }
     
